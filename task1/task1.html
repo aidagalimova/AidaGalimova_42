@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function sumToRec(n)
+	{
+		if(n>1)
+		{
+			return n+sumToRec(n-1);
+		}
+		else{
+			return n;
+		}
+
+	}
+	alert(sumToRec(5));
+	function sumToLoop(n)
+	{
+		var m = 0;
+		while(n>0)
+		{
+			m+=n;
+			n--;
+		}
+		return m;
+	}
+	alert(sumToLoop(5));
+	function recursion(n)
+	{
+		if(n>1)
+		{
+			return n*recursion(n-1);
+		}
+		else{
+			return n;
+		}
+	}
+	alert(recursion(3));
+</script>
+</body>
+</html>

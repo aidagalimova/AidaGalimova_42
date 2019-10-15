@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	//ДЗ 2.
+	var obj = {
+		className: 'm menu menu block menu menu e'
+	}
+    //Добавить класс в строку
+	function addClass(obj, className)
+	{
+		if(!obj.className.indexOf(' ' + className + ' '))
+		    obj.className +=' '+className;
+	}
+	addClass(obj, 'm')
+	alert(obj.className);
+
+	//Удалить класс из строки
+	function deleteClass(obj, className)
+	{
+		while(obj.className.indexOf(className) != -1)
+		{
+		obj.className = obj.className.replace(className + ' ', '');
+	}
+	}
+	deleteClass(obj, 'menu');
+	alert(obj.className);
+</script> 
+</body>
+</html>

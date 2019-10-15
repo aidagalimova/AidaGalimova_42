@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	//ДЗ 1. Калькулятор для введенных значений
+	function sum()
+	{
+		var arr =[];
+		var n = 0;
+	    while(true)
+	    {
+	    	arr[n] = prompt();
+	    	if(arr[n] === '' || arr[n] === null || arr[n].isNaN)
+	    	{
+	    	return alert(arr.reduce(function(sum, current){
+	    	return sum+(+current);},0));
+	    	}
+	    	n++;
+	    }
+	}
+	sum();
+</script> 
+</body>
+</html>

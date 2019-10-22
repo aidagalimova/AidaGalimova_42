@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function makeBuffer() {
+		var text = ''; 
+		var arr = [];
+		function buffer (str)
+		{ 
+			if(str === undefined)
+				return text;
+			text = text + str;
+			return text;
+		}
+		buffer.remove = function(str)
+		{
+			while (text.indexOf(str) != -1)
+			{
+				text = text.replace(str, '');
+			}
+			text = text.replace(/  +/g, ' ');
+		}
+		return buffer;
+	}
+
+var buffer = makeBuffer();
+// добавить значения к буферу
+buffer('Замыкания');
+buffer(' Использовать');
+buffer(' Нужно!');
+// получить текущее значение
+alert( buffer() ); // Замыкания Использовать Нужно!
+buffer.remove('Использовать');
+alert( buffer() ); // Замыкания Нужно!
+</script>
+</body>
+</html>

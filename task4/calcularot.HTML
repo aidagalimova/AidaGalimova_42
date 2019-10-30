@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function Calculator()
+	{
+		this.read = function()
+		{
+			this.a = +prompt();
+			this.b = +prompt();
+		}
+		this.sum = function()
+		{
+			return this.a+this.b;
+		}
+		this.mul = function()
+		{
+			return this.a*this.b;
+		}
+	}
+	var calculator = new Calculator();
+	calculator.read();
+	alert(calculator.sum());
+	alert(calculator.mul());
+</script>
+</body>
+</html>

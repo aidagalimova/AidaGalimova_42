@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function sumArgs() {
+		arguments.reduce = [].reduce;
+		return arg = arguments.reduce(function(previousValue, currentValue) {
+			return previousValue + currentValue;
+		});	
+	}
+	alert(sumArgs(1, 2, 3));
+</script>
+</body>
+</html>

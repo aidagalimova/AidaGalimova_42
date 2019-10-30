@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function User(fullName) {
+  this.fullName = fullName;
+  Object.defineProperties(this, {
+    firstName: {
+      get: function() {
+        return this.fullName.split(' ')[0];
+      },
+      set: function(value){
+      	this.fullName = value + ' ' + this.patronym + ' ' + this.lastName;
+      }
+      },
+       lastName: {
+      get: function() {
+        return this.fullName.split(' ')[2];
+      },
+      set: function(value){
+      	this.fullName = this.firstName + ' ' + this.patronym + ' ' + value;
+      }
+      },
+       patronym: {
+      get: function() {
+        return this.fullName.split(' ')[1];
+      },
+      set: function(value){
+      	this.fullName = this.firstName + ' ' + value + ' ' + this.lastName;
+      }
+      }
+    })
+}
+var vanya = new User("Иван Васильевич Петров");
+// чтение firstName/lastName
+alert( vanya.firstName ); // Иван
+alert( vanya.lastName ); // Петров
+alert( vanya.patronym ); // Васильевич
+vanya.lastName = 'Сидоров';
+alert( vanya.fullName ); // Иван Васильевич
+</script>
+</body>
+</html>
